@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/Users/silasmedererer/Library/Caches/pypoetry/virtualenvs/btre-HDGt4yIw-py3.12"
+  "editor.rulers": [80, 120],
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

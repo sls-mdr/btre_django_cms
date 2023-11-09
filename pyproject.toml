@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "btre"
 version = "0.1.0"
-description = ""
+description = "CMS to publish real estate offers"
 authors = ["Silas Mederer <mederersilas@gmail.com>"]
 readme = "README.md"
 
@@ -10,6 +10,7 @@ python = "^3.12"
 django = "^4.2.7"
 autopep8 = "^2.0.4"
 pylint = "^3.0.2"
+psycopg2-binary = "^2.9.9"
 
 
 [build-system]

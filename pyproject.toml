@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "btre"
+name = "BT Real Estate House Sales CMS"
 version = "0.1.0"
-description = "CMS to publish real estate offers"
+description = "This CMS allows BT Real Estate staff to manage and showcase house listings for sale in the USA."
 authors = ["Silas Mederer <mederersilas@gmail.com>"]
 readme = "README.md"
 

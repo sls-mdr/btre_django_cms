@@ -1,0 +1,53 @@
+Data Model btre_db
+
+LISTING
+----
+id int FK >- CONTACT.listing_id
+realtor int FK >- REALTOR.id
+title str
+address str
+city str
+state str
+zipcode str
+description text
+price int
+bedrooms int
+bathrooms float
+garage int
+sqft int
+lot_size float
+photo_main str
+photo_1 str
+photo_2 str
+photo_3 str
+photo_4 str
+photo_5 str
+photo_6 str
+is_published bool
+list_date date
+
+
+
+REALTOR
+----
+id int
+name str
+photo str
+description text
+email str
+phone str
+is_mvp bool
+hire_date date
+
+
+CONTACT
+----
+id int
+user_id int
+listing int
+listing_id int
+name str
+email str
+phone str
+message text
+contact_date date

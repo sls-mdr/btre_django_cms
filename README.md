@@ -6,7 +6,7 @@ Welcome to the BT Real Estate House Sales Content Management System (CMS) projec
 
 ### Prerequisites
 
-You need `Python 3.12` and `docker compose` on your mashine.
+You need `Python 3.12` and `docker compose` on your local machine.
 
 To get started with this project, follow these installation steps:
 

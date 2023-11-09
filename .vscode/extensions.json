@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "wholroyd.jinja"
+        "wholroyd.jinja",
+        "mtxr.sqltools"
     ]
 }

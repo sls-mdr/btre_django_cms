@@ -3,5 +3,17 @@
   "editor.formatOnSave": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "btre",
+      "database": "btre_db",
+      "username": "postgres",
+      "password": "123"
+    }
+  ]
 }

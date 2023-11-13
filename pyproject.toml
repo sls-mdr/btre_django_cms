@@ -12,6 +12,7 @@ autopep8 = "^2.0.4"
 pylint = "^3.0.2"
 psycopg2-binary = "^2.9.9"
 pillow = "^10.1.0"
+pylint-django = "^2.5.5"
 
 
 [build-system]

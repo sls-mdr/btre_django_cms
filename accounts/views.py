@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.contrib import messages, auth
 from django.contrib.auth.models import User
 
 
@@ -61,18 +61,46 @@ def register(request: object) -> object:
         return render(request, "accounts/register.html")
 
 
-def login(request):
-    """A view that displays the login page"""
+def login(request: object) -> object:
+    """
+    View for displaying the login page and handling user login.
+
+    Args:
+        request: HTTP request object.
+
+    Returns:
+        HttpResponse: Rendered HTML page or redirection.
+
+    """
     if request.method == "POST":
-        print("Is Submitted")
-        return redirect("login")
+        # Extract username and password from the POST request
+        username = request.POST["username"]
+        password = request.POST["password"]
+
+        # Authenticate user using Django's authentication system
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            # If authentication is successful, log in the user redirect to dashboard
+            auth.login(request, user)
+            messages.success(request, "You are now logged in")
+            return redirect("dashboard")
+        else:
+            # If authentication fails, display an error message and redirect to the login page
+            messages.error(request, "Invalid credentials")
+            return redirect("login")
+
     else:
+        # If the request method is not POST, render the login form
         return render(request, "accounts/login.html")
 
 
 def logout(request):
     """A view that displays the logout page"""
-    return redirect("index")
+    if request.method == "POST":
+        auth.logout(request)
+        messages.success(request, "You are now logged out")
+        return redirect("index")
 
 
 def dashboard(request):

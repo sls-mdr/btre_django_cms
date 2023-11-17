@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail
+
+from btre.settings import EMAIL_HOST_USER
 from .models import Contact
 
 
@@ -56,6 +59,17 @@ def contact(request: object) -> object:
         )
 
         contact.save()
+
+        # TODO if necessary search for gmail alternatives
+        # Send email to retalor
+        # send_mail(
+        #     subject=f"Property Listing Inquiery: {listing}",
+        #     message=f"There has been an inquiery for {listing}. Sign in into the admin panel for more info.",
+        #     from_email=EMAIL_HOST_USER,
+        #     recipient_list=[realtor_email, "mederersilas@gmail.com"],
+        #     fail_silently=False,
+        # )
+
         messages.success(
             request, "Your request has been submitted. A realtor will get back to you."
         )
